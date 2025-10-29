@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 10px;
+}
+/* ====== Container Style ====== */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;  /* 16px */
+  padding-right: 1rem; /* 16px */
+  --container-margin-start: auto;
+}
+body {
+  font-family: 'Almarai', sans-serif;
+}
+
+
+/* ====== Breakpoints ====== */
+@media (max-width: 640px) {
+  
+   :root {
+  font-size: 6px !important;
+}
+ 
+  
+}
+
+@media (max-width: 1023px) {
+   nav {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  nav.container, 
+ 
+    :root {
+  font-size: 6px;
+}
+}
+
+
+@media (max-width: 1024px) {
+  
+ 
+ 
+  
+  
+}
+
+@media (max-width: 1280px) {
+  
+  :root {
+  font-size: 8.5px;
+  }
+}
+
+@media (max-width: 1536px) {
+
+ :root{
+    font-size: 8px;
+  }
+  
+}
+
+ @media (min-width: 2100px) {
+  
+  :root{
+    font-size: 12px;
+  }
+}
+
+ @media (min-width: 2400px) {
+  
+  :root{
+    font-size: 15px;
+  }
+}
+ @media (min-width: 3200px) {
+ 
+  :root{
+    font-size: 20px;
+  }
+}
+ @media (min-width: 4900px) {
+  
+  :root{
+    font-size: 35px;
+  }
+}
+ @media (min-width: 6200px) {
+  
+  :root{
+    font-size: 46px;
+  }
+}
