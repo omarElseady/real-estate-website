@@ -3,8 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 :root {
-  font-size: 10px;
+  font-size: 16px;
 }
 /* ====== Container Style ====== */
 .container {
