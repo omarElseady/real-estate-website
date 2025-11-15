@@ -102,10 +102,10 @@
     </ul>
 
     <div class="flex flex-col gap-6 w-full">
-      <button class="bg-white border border-[#A5852E] text-[#A5852E] py-10 text-3xl rounded-xl font-bold opacity-0 -translate-x-10 transition-all duration-700 delay-400 sidebar-item hover:bg-[#A5852E] hover:text-white">
+      <button class="bg-white border border-[#A5852E] text-[#A5852E] py-7 text-2xl rounded-xl font-bold opacity-0 -translate-x-10 transition-all duration-700 delay-400 sidebar-item hover:bg-[#A5852E] hover:text-white">
         تقديم طلب
       </button>
-      <button class="bg-[#A5852E] text-white py-10 text-3xl rounded-xl font-bold opacity-0 -translate-x-10 transition-all duration-700 delay-500 sidebar-item hover:bg-[#8F7326]">
+      <button class="bg-[#A5852E] text-white py-7 text-2xl rounded-xl font-bold opacity-0 -translate-x-10 transition-all duration-700 delay-500 sidebar-item hover:bg-[#8F7326]">
         اتصل بنا
       </button>
     </div>
@@ -118,41 +118,7 @@
   class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-[90] hidden transition-opacity duration-500"
 ></div>
 
-<script>
-  const menuBtn = document.getElementById("menu-btn");
-  const closeBtn = document.getElementById("close-btn");
-  const sidebar = document.getElementById("sidebar");
-  const overlay = document.getElementById("overlay");
-  const sidebarItems = document.querySelectorAll(".sidebar-item");
 
-  // Open sidebar
-  menuBtn.addEventListener("click", () => {
-    sidebar.classList.remove("-translate-x-full");
-    overlay.classList.remove("hidden");
-    overlay.classList.add("opacity-100");
-
-    // Animate sidebar items
-    sidebarItems.forEach((item, i) => {
-      setTimeout(() => {
-        item.classList.remove("opacity-0", "-translate-x-10");
-      }, i * 100);
-    });
-  });
-
-  // Close sidebar
-  const closeSidebar = () => {
-    sidebar.classList.add("-translate-x-full");
-    overlay.classList.add("hidden");
-    overlay.classList.remove("opacity-100");
-
-    sidebarItems.forEach((item) => {
-      item.classList.add("opacity-0", "-translate-x-10");
-    });
-  };
-
-  closeBtn.addEventListener("click", closeSidebar);
-  overlay.addEventListener("click", closeSidebar);
-</script>
 
 <style>
   /* Smooth fade-in animation for sidebar content */
@@ -356,16 +322,16 @@
     <div class=" rounded-2xl  flex flex-col">
       <img src="images/house1.png" alt="فيلا فاخرة في الرياض" class="w-full rounded-t-2xl object-cover"/>
       <div class="p-[.625rem]">
-        <h3 class="text-[1.125rem] font-semibold my-[.468rem] "><span>1,050,000 </span> <span class="mr-">ريال</span></h3>
-        <p class="text-[#181A20] text-[1.125rem] font-semibold my-3">شقة في الرياض مع صالة رياضية</p>
+        <h3 class="text-[1.125rem] font-semibold my-1 "><span>1,050,000 </span> <span class="mr-">ريال</span></h3>
+        <p class="text-[#181A20] text-[1.125rem] font-semibold my-1">شقة في الرياض مع صالة رياضية</p>
         <p class="text-[#717171] opacity-50 mb-2 text-[1.0625rem] my-2">343 حي الشرق</p>
-        <div class="flex items-center gap-2 text-[1.0625rem] my-">
+        <div class="flex items-center gap-2 text-[1.0625rem] my-1">
           <img src="images/Vector (10).svg" alt="icon" class="w-[1rem] h-[1rem]"/>
-          <span class="ml-5 mr-2 ">3<span >غرف</span></span>
+          <span class="ml-[1rem] mr-[.1rem] ">3<span >غرف</span></span>
           <img src="images/Vector (13).svg" alt="icon" class="w-[1rem] h-[1rem]"/>
-          <span class="ml-5 mr-2">1<span >حمام</span></span>
+          <span class="ml-[1rem] mr-[.1rem]">1<span >حمام</span></span>
           <img src="images/Vector (11).svg" alt="icon" class="w-[1rem] h-[1rem]"/>
-          <span class="ml-5 mr-2">200<span >متر</span></span>
+          <span class="ml-[1rem] mr-[.1rem]">200<span >متر</span></span>
         </div>
       </div>
     </div>
@@ -373,143 +339,145 @@
     <!-- Card 2 -->
     <div class=" rounded-2xl  flex flex-col">
       <img src="images/house2.png" alt="فيلا فاخرة في الرياض" class="w-full rounded-t-2xl object-cover"/>
-      <div class="p-4">
-        <h3 class="text-[1.125rem] font-semibold my-3 "><span>1,050,000 </span> <span class="mr-1">ريال</span></h3>
-        <p class="text-[#181A20] text-[1.125rem] font-semibold my-3">شقة في الرياض مع صالة رياضية</p>
-        <p class="text-[#717171] opacity-50 mb-2 text-[1.0625rem] my-3">343 حي الشرق</p>
-        <div class="flex items-center gap-2 text-[1.0625rem] my-3">
+      <div class="p-[.625rem]">
+        <h3 class="text-[1.125rem] font-semibold my-1 "><span>1,050,000 </span> <span class="mr-">ريال</span></h3>
+        <p class="text-[#181A20] text-[1.125rem] font-semibold my-1">شقة في الرياض مع صالة رياضية</p>
+        <p class="text-[#717171] opacity-50 mb-2 text-[1.0625rem] my-2">343 حي الشرق</p>
+        <div class="flex items-center gap-2 text-[1.0625rem] my-1">
           <img src="images/Vector (10).svg" alt="icon" class="w-[1rem] h-[1rem]"/>
-          <span class="ml-5 mr-2 ">3<span class="mr-1">غرف</span></span>
+          <span class="ml-[1rem] mr-[.1rem] ">3<span >غرف</span></span>
           <img src="images/Vector (13).svg" alt="icon" class="w-[1rem] h-[1rem]"/>
-          <span class="ml-5 mr-2">1<span class="mr-1">حمام</span></span>
+          <span class="ml-[1rem] mr-[.1rem]">1<span >حمام</span></span>
           <img src="images/Vector (11).svg" alt="icon" class="w-[1rem] h-[1rem]"/>
-          <span class="ml-5 mr-2">200<span class="mr-1">متر</span></span>
+          <span class="ml-[1rem] mr-[.1rem]">200<span >متر</span></span>
         </div>
       </div>
     </div>
 
     <!-- Card 3 -->
-    <div class=" rounded-2xl  flex flex-col">
+     <div class=" rounded-2xl  flex flex-col">
       <img src="images/house3.png" alt="فيلا فاخرة في الرياض" class="w-full rounded-t-2xl object-cover"/>
-      <div class="p-4">
-        <h3 class="text-[1.125rem] font-semibold my-3 "><span>1,050,000 </span> <span class="mr-1">ريال</span></h3>
-        <p class="text-[#181A20] text-[1.125rem] font-semibold my-3">شقة في الرياض مع صالة رياضية</p>
-        <p class="text-[#717171] opacity-50 mb-2 text-[1.0625rem] my-3">343 حي الشرق</p>
-        <div class="flex items-center gap-2 text-[1.0625rem] my-3">
+      <div class="p-[.625rem]">
+        <h3 class="text-[1.125rem] font-semibold my-1 "><span>1,050,000 </span> <span class="mr-">ريال</span></h3>
+        <p class="text-[#181A20] text-[1.125rem] font-semibold my-1">شقة في الرياض مع صالة رياضية</p>
+        <p class="text-[#717171] opacity-50 mb-2 text-[1.0625rem] my-2">343 حي الشرق</p>
+        <div class="flex items-center gap-2 text-[1.0625rem] my-1">
           <img src="images/Vector (10).svg" alt="icon" class="w-[1rem] h-[1rem]"/>
-          <span class="ml-5 mr-2 ">3<span class="mr-1">غرف</span></span>
+          <span class="ml-[1rem] mr-[.1rem] ">3<span >غرف</span></span>
           <img src="images/Vector (13).svg" alt="icon" class="w-[1rem] h-[1rem]"/>
-          <span class="ml-5 mr-2">1<span class="mr-1">حمام</span></span>
+          <span class="ml-[1rem] mr-[.1rem]">1<span >حمام</span></span>
           <img src="images/Vector (11).svg" alt="icon" class="w-[1rem] h-[1rem]"/>
-          <span class="ml-5 mr-2">200<span class="mr-1">متر</span></span>
+          <span class="ml-[1rem] mr-[.1rem]">200<span >متر</span></span>
         </div>
       </div>
     </div>
 
     <!-- Card 4 -->
-   <div class=" rounded-2xl  flex flex-col">
+    <div class=" rounded-2xl  flex flex-col">
       <img src="images/house4.png" alt="فيلا فاخرة في الرياض" class="w-full rounded-t-2xl object-cover"/>
-      <div class="p-4">
-        <h3 class="text-[1.125rem] font-semibold my-3 "><span>1,050,000 </span> <span class="mr-1">ريال</span></h3>
-        <p class="text-[#181A20] text-[1.125rem] font-semibold my-3">شقة في الرياض مع صالة رياضية</p>
-        <p class="text-[#717171] opacity-50 mb-2 text-[1.0625rem] my-3">343 حي الشرق</p>
-        <div class="flex items-center gap-2 text-[1.0625rem] my-3">
+      <div class="p-[.625rem]">
+        <h3 class="text-[1.125rem] font-semibold my-1 "><span>1,050,000 </span> <span class="mr-">ريال</span></h3>
+        <p class="text-[#181A20] text-[1.125rem] font-semibold my-1">شقة في الرياض مع صالة رياضية</p>
+        <p class="text-[#717171] opacity-50 mb-2 text-[1.0625rem] my-2">343 حي الشرق</p>
+        <div class="flex items-center gap-2 text-[1.0625rem] my-1">
           <img src="images/Vector (10).svg" alt="icon" class="w-[1rem] h-[1rem]"/>
-          <span class="ml-5 mr-2 ">3<span class="mr-1">غرف</span></span>
+          <span class="ml-[1rem] mr-[.1rem] ">3<span >غرف</span></span>
           <img src="images/Vector (13).svg" alt="icon" class="w-[1rem] h-[1rem]"/>
-          <span class="ml-5 mr-2">1<span class="mr-1">حمام</span></span>
+          <span class="ml-[1rem] mr-[.1rem]">1<span >حمام</span></span>
           <img src="images/Vector (11).svg" alt="icon" class="w-[1rem] h-[1rem]"/>
-          <span class="ml-5 mr-2">200<span class="mr-1">متر</span></span>
+          <span class="ml-[1rem] mr-[.1rem]">200<span >متر</span></span>
         </div>
       </div>
     </div>
 
     <!-- Card 5 -->
-   <div class=" rounded-2xl  flex flex-col">
+    <div class=" rounded-2xl  flex flex-col">
       <img src="images/house5.png" alt="فيلا فاخرة في الرياض" class="w-full rounded-t-2xl object-cover"/>
-      <div class="p-4">
-        <h3 class="text-[1.125rem] font-semibold my-3 "><span>1,050,000 </span> <span class="mr-1">ريال</span></h3>
-        <p class="text-[#181A20] text-[1.125rem] font-semibold my-3">شقة في الرياض مع صالة رياضية</p>
-        <p class="text-[#717171] opacity-50 mb-2 text-[1.0625rem] my-3">343 حي الشرق</p>
-        <div class="flex items-center gap-2 text-[1.0625rem] my-3">
+      <div class="p-[.625rem]">
+        <h3 class="text-[1.125rem] font-semibold my-1 "><span>1,050,000 </span> <span class="mr-">ريال</span></h3>
+        <p class="text-[#181A20] text-[1.125rem] font-semibold my-1">شقة في الرياض مع صالة رياضية</p>
+        <p class="text-[#717171] opacity-50 mb-2 text-[1.0625rem] my-2">343 حي الشرق</p>
+        <div class="flex items-center gap-2 text-[1.0625rem] my-1">
           <img src="images/Vector (10).svg" alt="icon" class="w-[1rem] h-[1rem]"/>
-          <span class="ml-5 mr-2 ">3<span class="mr-1">غرف</span></span>
+          <span class="ml-[1rem] mr-[.1rem] ">3<span >غرف</span></span>
           <img src="images/Vector (13).svg" alt="icon" class="w-[1rem] h-[1rem]"/>
-          <span class="ml-5 mr-2">1<span class="mr-1">حمام</span></span>
+          <span class="ml-[1rem] mr-[.1rem]">1<span >حمام</span></span>
           <img src="images/Vector (11).svg" alt="icon" class="w-[1rem] h-[1rem]"/>
-          <span class="ml-5 mr-2">200<span class="mr-1">متر</span></span>
+          <span class="ml-[1rem] mr-[.1rem]">200<span >متر</span></span>
         </div>
       </div>
     </div>
 
     <!-- Card 6 -->
    <!-- الكارت رقم 6 -->
-<div class="rounded-2xl flex flex-col relative overflow-hidden">
+<div class="rounded-xl flex flex-col relative overflow-hidden">
   <!-- الصورة -->
-  <img src="images/house6.png" alt="شقة في جدة" class="w-full rounded-t-2xl object-cover"/>
+  <img src="images/house6.png" alt="شقة في جدة" class="w-full rounded-t-xl object-cover"/>
 
   <!-- التاج الأصفر -->
-  <div class="absolute top-[5%] right-[4%] bg-[#A5852E] text-white 
-              text-[clamp(1.2rem,1.5vw,1.6rem)] font-bold 
-              px-[clamp(0.8rem,1.5vw,1rem)] py-[clamp(0.6rem,1.2vw,0.9rem)] 
-              rounded-2xl flex items-center gap-[0.8rem]
-              sm:top-[5%] sm:right-[4%]
-              max-sm:text-[1.8rem] max-sm:px-[1.6rem] max-sm:py-[1rem] max-sm:gap-[1rem]">
+ <div class="absolute top-[3.125%] right-[2.5%] bg-[#A5852E] text-white 
+              text-[clamp(0.75rem,0.9375vw,1rem)] font-bold 
+              px-[clamp(0.5rem,0.9375vw,0.625rem)] py-[clamp(0.375rem,0.75vw,0.5625rem)] 
+              rounded-xl flex items-center gap-[0.5rem]
+              sm:top-[3.125%] sm:right-[2.5%]
+              max-sm:text-[1.125rem] max-sm:px-[1rem] max-sm:py-[0.625rem] max-sm:gap-[0.625rem]">
+
     <img src="images/Vector (14).svg" alt="new icon" 
-         class="w-[clamp(1.4rem,1.8vw,1.8rem)] h-[clamp(1.4rem,1.8vw,1.8rem)] ml-[clamp(0.8rem,1vw,1rem)] 
-                max-sm:w-[2.2rem] max-sm:h-[2.2rem]" />
+         class="w-[clamp(0.875rem,1.125vw,1.125rem)] h-[clamp(0.875rem,1.125vw,1.125rem)] ml-[clamp(0.5rem,0.625vw,0.625rem)] 
+                max-sm:w-[1.375rem] max-sm:h-[1.375rem]" />
     جديد لك
   </div>
 
   <!-- باقي المحتوى -->
-  <div class="p-4">
-    <h3 class="text-[1.125rem] font-semibold my-3 "><span>1,050,000 </span> <span class="mr-1">ريال</span></h3>
-        <p class="text-[#181A20] text-[1.125rem] font-semibold my-3">شقة في الرياض مع صالة رياضية</p>
-        <p class="text-[#717171] opacity-50 mb-2 text-[1.0625rem] my-3">343 حي الشرق</p>
-        <div class="flex items-center gap-2 text-[1.0625rem] my-3">
+  <div class="p-[.625rem]">
+        <h3 class="text-[1.125rem] font-semibold my-1 "><span>1,050,000 </span> <span class="mr-">ريال</span></h3>
+        <p class="text-[#181A20] text-[1.125rem] font-semibold my-1">شقة في الرياض مع صالة رياضية</p>
+        <p class="text-[#717171] opacity-50 mb-2 text-[1.0625rem] my-2">343 حي الشرق</p>
+        <div class="flex items-center gap-2 text-[1.0625rem] my-1">
           <img src="images/Vector (10).svg" alt="icon" class="w-[1rem] h-[1rem]"/>
-          <span class="ml-5 mr-2 ">3<span class="mr-1">غرف</span></span>
+          <span class="ml-[1rem] mr-[.1rem] ">3<span >غرف</span></span>
           <img src="images/Vector (13).svg" alt="icon" class="w-[1rem] h-[1rem]"/>
-          <span class="ml-5 mr-2">1<span class="mr-1">حمام</span></span>
+          <span class="ml-[1rem] mr-[.1rem]">1<span >حمام</span></span>
           <img src="images/Vector (11).svg" alt="icon" class="w-[1rem] h-[1rem]"/>
-          <span class="ml-5 mr-2">200<span class="mr-1">متر</span></span>
-    </div>
-  </div>
+          <span class="ml-[1rem] mr-[.1rem]">200<span >متر</span></span>
+        </div>
+      </div>
 </div>
 
 
 <!-- الكارت رقم 7 -->
-<div class="rounded-2xl flex flex-col relative overflow-hidden">
+<div class="rounded-xl flex flex-col relative overflow-hidden">
   <!-- الصورة -->
-  <img src="images/house7.png" alt="شقة في جدة" class="w-full rounded-t-2xl object-cover"/>
+  <img src="images/house7.png" alt="شقة في جدة" class="w-full rounded-t-xl object-cover"/>
 
   <!-- التاج الأصفر -->
-  <div class="absolute top-[5%] right-[4%] bg-[#A5852E] text-white 
-              text-[clamp(1.2rem,1.5vw,1.6rem)] font-bold 
-              px-[clamp(0.8rem,1.5vw,1rem)] py-[clamp(0.6rem,1.2vw,0.9rem)] 
-              rounded-2xl flex items-center gap-[0.8rem]
-              sm:top-[5%] sm:right-[4%]
-              max-sm:text-[1.8rem] max-sm:px-[1.6rem] max-sm:py-[1rem] max-sm:gap-[1rem]">
+  <div class="absolute top-[3.125%] right-[2.5%] bg-[#A5852E] text-white 
+              text-[clamp(0.75rem,0.9375vw,1rem)] font-bold 
+              px-[clamp(0.5rem,0.9375vw,0.625rem)] py-[clamp(0.375rem,0.75vw,0.5625rem)] 
+              rounded-xl flex items-center gap-[0.5rem]
+              sm:top-[3.125%] sm:right-[2.5%]
+              max-sm:text-[1.125rem] max-sm:px-[1rem] max-sm:py-[0.625rem] max-sm:gap-[0.625rem]">
+
     <img src="images/Vector (14).svg" alt="new icon" 
-         class="w-[clamp(1.4rem,1.8vw,1.8rem)] h-[clamp(1.4rem,1.8vw,1.8rem)] ml-[clamp(0.8rem,1vw,1rem)] 
-                max-sm:w-[2.2rem] max-sm:h-[2.2rem]" />
+         class="w-[clamp(0.875rem,1.125vw,1.125rem)] h-[clamp(0.875rem,1.125vw,1.125rem)] ml-[clamp(0.5rem,0.625vw,0.625rem)] 
+                max-sm:w-[1.375rem] max-sm:h-[1.375rem]" />
     جديد لك
   </div>
 
   <!-- باقي المحتوى -->
-  <div class="p-4">
-    <h3 class="text-[1.125rem] font-semibold my-3 "><span>1,050,000 </span> <span class="mr-1">ريال</span></h3>
-        <p class="text-[#181A20] text-[1.125rem] font-semibold my-3">شقة في الرياض مع صالة رياضية</p>
-        <p class="text-[#717171] opacity-50 mb-2 text-[1.0625rem] my-3">343 حي الشرق</p>
-        <div class="flex items-center gap-2 text-[1.0625rem] my-3">
+ <div class="p-[.625rem]">
+        <h3 class="text-[1.125rem] font-semibold my-1 "><span>1,050,000 </span> <span class="mr-">ريال</span></h3>
+        <p class="text-[#181A20] text-[1.125rem] font-semibold my-1">شقة في الرياض مع صالة رياضية</p>
+        <p class="text-[#717171] opacity-50 mb-2 text-[1.0625rem] my-2">343 حي الشرق</p>
+        <div class="flex items-center gap-2 text-[1.0625rem] my-1">
           <img src="images/Vector (10).svg" alt="icon" class="w-[1rem] h-[1rem]"/>
-          <span class="ml-5 mr-2 ">3<span class="mr-1">غرف</span></span>
+          <span class="ml-[1rem] mr-[.1rem] ">3<span >غرف</span></span>
           <img src="images/Vector (13).svg" alt="icon" class="w-[1rem] h-[1rem]"/>
-          <span class="ml-5 mr-2">1<span class="mr-1">حمام</span></span>
+          <span class="ml-[1rem] mr-[.1rem]">1<span >حمام</span></span>
           <img src="images/Vector (11).svg" alt="icon" class="w-[1rem] h-[1rem]"/>
-          <span class="ml-5 mr-2">200<span class="mr-1">متر</span></span>
-    </div>
-  </div>
+          <span class="ml-[1rem] mr-[.1rem]">200<span >متر</span></span>
+        </div>
+      </div>
 </div>
 
 
@@ -517,17 +485,17 @@
     <!-- Card 8 -->
     <div class=" rounded-2xl  flex flex-col">
       <img src="images/house8.png" alt="فيلا فاخرة في الرياض" class="w-full rounded-t-2xl object-cover"/>
-      <div class="p-4">
-        <h3 class="text-[1.125rem] font-semibold my-3 "><span>1,050,000 </span> <span class="mr-1">ريال</span></h3>
-        <p class="text-[#181A20] text-[1.125rem] font-semibold my-3">شقة في الرياض مع صالة رياضية</p>
-        <p class="text-[#717171] opacity-50 mb-2 text-[1.0625rem] my-3">343 حي الشرق</p>
-        <div class="flex items-center gap-2 text-[1.0625rem] my-3">
+      <div class="p-[.625rem]">
+        <h3 class="text-[1.125rem] font-semibold my-1 "><span>1,050,000 </span> <span class="mr-">ريال</span></h3>
+        <p class="text-[#181A20] text-[1.125rem] font-semibold my-1">شقة في الرياض مع صالة رياضية</p>
+        <p class="text-[#717171] opacity-50 mb-2 text-[1.0625rem] my-2">343 حي الشرق</p>
+        <div class="flex items-center gap-2 text-[1.0625rem] my-1">
           <img src="images/Vector (10).svg" alt="icon" class="w-[1rem] h-[1rem]"/>
-          <span class="ml-5 mr-2 ">3<span class="mr-1">غرف</span></span>
+          <span class="ml-[1rem] mr-[.1rem] ">3<span >غرف</span></span>
           <img src="images/Vector (13).svg" alt="icon" class="w-[1rem] h-[1rem]"/>
-          <span class="ml-5 mr-2">1<span class="mr-1">حمام</span></span>
+          <span class="ml-[1rem] mr-[.1rem]">1<span >حمام</span></span>
           <img src="images/Vector (11).svg" alt="icon" class="w-[1rem] h-[1rem]"/>
-          <span class="ml-5 mr-2">200<span class="mr-1">متر</span></span>
+          <span class="ml-[1rem] mr-[.1rem]">200<span >متر</span></span>
         </div>
       </div>
     </div>
@@ -542,71 +510,73 @@
   class="w-full xl:w-[44%] lg:w-[56%] flex flex-col justify-center items-center lg:items-start pr-[0rem] lg:pr-[10rem] gap-16"
 >
   <div>
-    <h3 class="text-[4rem] font-semibold pb-4 text-center lg:text-right">
-      لماذا تختارنا؟
-    </h3>
-    <p class="text-[1.6rem] leading-loose text-center lg:text-right">
-      لأننا نقدم حلولا عقارية مبتكرة، لنضمن لك استثمارا
-      <br />
-      و سكنا يلبي تطلعاتك.
-    </p>
+      <h3 class="text-[2.5rem] font-semibold pb-2.5 text-center lg:text-right">
+        لماذا تختارنا؟
+      </h3>
+      <p class="text-[1rem] leading-loose text-center lg:text-right">
+        لأننا نقدم حلولا عقارية مبتكرة، لنضمن لك استثمارا
+        <br />
+        و سكنا يلبي تطلعاتك.
+      </p>
+    </div>
+
+  <div class="flex flex-col gap-10">
+      <!-- الميزة الأولى -->
+      <div class="flex items-start">
+        <img
+          src="images/div.features-box-image.svg"
+          alt="house icon"
+          class="object-contain w-[4.375rem] h-[4.375rem] flex-shrink-0"
+        />
+        <div class="mr-5">
+          <h5 class="text-[1.0625rem] font-semibold pb-2.5">
+            متابعة أحدث اتجاهات السوق العقاري
+          </h5>
+          <p class="leading-loose text-[1rem]">
+            نواكب باستمرار أحدث التطورات في السوق العقاري لنقدم لك
+            <br />
+            خيارات مدروسة، تحقق أقصى استفادة من فرص المستقبل.
+          </p>
+        </div>
+      </div>
+
+      <!-- الميزة الثانية -->
+      <div class="flex items-start">
+        <img
+          src="images/div.features-box-image (1).svg"
+          alt="house icon"
+          class="object-contain w-[4.375rem] h-[4.375rem] flex-shrink-0"
+        />
+        <div class="mr-5">
+          <h5 class="text-[1.0625rem] font-semibold pb-2.5">أقل هامش ربح</h5>
+          <p class="leading-loose text-[1rem]">
+            استمتع بعروض عقارية بأقل هامش ربح، مع شفافية كاملة
+            <br />
+            وقيمة استثمارية حقيقية تلبي توقعاتك دون مبالغة.
+          </p>
+        </div>
+      </div>
+
+      <!-- الميزة الثالثة -->
+      <div class="flex items-start">
+        <img
+          src="images/div.features-box-image (2).svg"
+          alt="house icon"
+          class="object-contain w-[4.375rem] h-[4.375rem] flex-shrink-0"
+        />
+        <div class="mr-5">
+          <h5 class="text-[1.0625rem] font-semibold pb-2.5">
+            عروض تناسب كافة الاحتياجات السكنية
+          </h5>
+          <p class="leading-loose text-[1rem]">
+            اختر من مجموعتنا المتنوعة بين شقق، فلل، واستوديوهات،
+            <br />
+            لتجد بسهولة الحل الأمثل لاحتياجاتك السكنية.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="flex flex-col gap-16">
-    <!-- الميزة الأولى -->
-    <div class="flex items-start">
-      <img
-        src="images/div.features-box-image.svg"
-        alt="house icon"
-        class="object-contain w-[7rem] h-[7rem] flex-shrink-0"
-      />
-      <div class="mr-8">
-        <h5 class="text-[1.7rem] font-semibold pb-4">
-          متابعة أحدث اتجاهات السوق العقاري
-        </h5>
-        <p class="leading-loose text-[1.6rem]">
-          نواكب باستمرار أحدث التطورات في السوق العقاري لنقدم لك
-          <br />
-          خيارات مدروسة، تحقق أقصى استفادة من فرص المستقبل.
-        </p>
-      </div>
-    </div>
-
-    <!-- الميزة الثانية -->
-    <div class="flex items-start">
-      <img
-        src="images/div.features-box-image (1).svg"
-        alt="house icon"
-        class="object-contain w-[7rem] h-[7rem] flex-shrink-0"
-      />
-      <div class="mr-8">
-        <h5 class="text-[1.7rem] font-semibold pb-4">أقل هامش ربح</h5>
-        <p class="leading-loose text-[1.6rem]">
-          استمتع بعروض عقارية بأقل هامش ربح، مع شفافية كاملة
-          <br />
-          وقيمة استثمارية حقيقية تلبي توقعاتك دون مبالغة.
-        </p>
-      </div>
-    </div>
-
-    <!-- الميزة الثالثة -->
-    <div class="flex items-start">
-      <img
-        src="images/div.features-box-image (2).svg"
-        alt="house icon"
-        class="object-contain w-[7rem] h-[7rem] flex-shrink-0"
-      />
-      <div class="mr-8">
-        <h5 class="text-[1.7rem] font-semibold pb-4">
-          عروض تناسب كافة الاحتياجات السكنية
-        </h5>
-        <p class="leading-loose text-[1.6rem]">
-          اختر من مجموعتنا المتنوعة بين شقق، فلل، واستوديوهات،
-          <br />
-          لتجد بسهولة الحل الأمثل لاحتياجاتك السكنية.
-        </p>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -617,17 +587,17 @@
           <img
             src="images/h34.png"
             alt="A modern house"
-            class="xl:h-screen lg:h-[70vh] xs:w-full px-[5rem] lg:px-[0rem]"
+            class="xl:h-screen lg:h-[70vh] xs:w-full px-[5rem] "
           />
           <div
-            class="flex absolute  bottom-16 translate-x-1/2 lg:translate-x-[0rem] right-1/2 lg:-right-20 bg-[#FFFFFF] shadow-lg rounded-xl py-10 pr-6 pl-24"
+            class="flex absolute  bottom-16 translate-x-1/2 lg:translate-x-[0rem] right-1/2 lg:-right-20 bg-[#FFFFFF] shadow-lg rounded-xl py-6 pr-4 pl-1"
           >
-            <img src="images/Group 1000000932.svg" alt="house icon" class="w-[7rem]" />
+            <img src="images/Group 1000000932.svg" alt="house icon" class="w-[4.375rem]" />
             <div class="flex flex-col justify-center mr-4">
               <h6 class="text-[1.4rem] font-light opacity-60">
                 اجمالي التمويلات
               </h6>
-              <div class="text-[2rem]">
+              <div class="text-[1.25rem]">
                 <span>5,600</span>
                 <span>تمويل</span>
               </div>
@@ -641,173 +611,228 @@
     
     <!-- أول مربع -->
     <div>
-      <span class="text-[3.5rem] lg:text-[4.2rem] font-bold text-[#181A20] block">1000<span class="mb-5 mr-2">+</span></span>
-      <p class="text-[1.2rem] lg:text-[1.5rem] text-[#181A20] mt-2 ml-7 ">عميل سعيد</p>
+      <span class="text-[2.1875rem] lg:text-[2.625rem] font-bold text-[#181A20] block">
+        1000<span class="mb-5 mr-2">+</span>
+      </span>
+      <p class="text-[0.75rem] lg:text-[0.9375rem] text-[#181A20] mt-2 ml-7">
+        عميل سعيد
+      </p>
     </div>
 
     <!-- ثاني مربع -->
     <div>
-       <span class="text-[3.5rem] lg:text-[4.2rem] font-bold text-[#181A20] block">5<span class="mb-5 mr-2">+</span></span>
-      <p class="text-[1.2rem] lg:text-[1.5rem] text-[#181A20] mt-2 ml-7 ">سنوات خبرة</p>
+      <span class="text-[2.1875rem] lg:text-[2.625rem] font-bold text-[#181A20] block">
+        5<span class="mb-5 mr-2">+</span>
+      </span>
+      <p class="text-[0.75rem] lg:text-[0.9375rem] text-[#181A20] mt-2 ml-7">
+        سنوات خبرة
+      </p>
     </div>
 
     <!-- ثالث مربع -->
     <div>
-       <span class="text-[3.5rem] lg:text-[4.2rem] font-bold text-[#181A20] block">500<span class="mb-5 mr-2">+</span></span>
-      <p class="text-[1.2rem] lg:text-[1.5rem] text-[#181A20] mt-2 ml-7 block ">استشارة عقارية</p> <p class="text-[1.2rem] lg:text-[1.5rem] text-[#181A20] mt-2 ml-7 block " >وتمويل</p>
+      <span class="text-[2.1875rem] lg:text-[2.625rem] font-bold text-[#181A20] block">
+        500<span class="mb-5 mr-2">+</span>
+      </span>
+      <p class="text-[0.75rem] lg:text-[0.9375rem] text-[#181A20] mt-2 ml-7 block">
+        استشارة عقارية
+      </p>
+      <p class="text-[0.75rem] lg:text-[0.9375rem] text-[#181A20] mt-2 ml-7 block">
+        وتمويل
+      </p>
     </div>
 
   </div>
 </section>
+
 <!-- ///// -->
-<section class="my-[35rem] max-sm:my-[4rem]">
+<section class="my-[21.875rem] max-sm:my-[2.5rem]">
   <!-- العنوان -->
   <div class="text-center mb-12">
-    <h2 class="text-[5rem] font-bold mb-[16rem] max-sm:mb-[4rem]">ماذا نقدم لك ؟</h2>
+    <h2 class="text-[3.125rem] font-bold mb-[10rem] max-sm:mb-[2.5rem]">ماذا نقدم لك ؟</h2>
   </div>
 
   <!-- المحتوى -->
-  <div class="flex flex-col-reverse lg:flex-row-reverse px-[4rem] lg:px-[13rem] md:px-[10rem] xs:px-[7rem]">
-    <!-- الجهة اليمنى (الصور) -->
-    <div class="w-full xl:w-[64%] lg:w-[58%] flex-1 flex flex-col gap-[3.8rem] pl-[0rem] xl:pl-[6rem] ">
-      <!-- صورة كبيرة -->
-      <img src="images/h1.jpg.png" alt="Main photo" class="w-full rounded-[1.5rem] object-cover">
+  <div class="flex flex-col-reverse xl:flex-row-reverse px-[2.5rem] xl:px-[8.125rem] md:px-[6.25rem] xs:px-[4.375rem]">
 
-      <!-- صورتين تحت بعضهما -->
+    <!-- الجهة اليمنى (الصور) -->
+    <div class="w-full xl:w-[64%] xl:w-[58%] flex-1 flex flex-col gap-[2.375rem] pl-[0rem] xl:pl-[3.75rem] ">
+      <img src="images/h1.jpg.png" alt="Main photo" class="w-full rounded-[0.9375rem] object-cover">
+
       <div class="flex justify-between">
-        <img src="images/image 13.png" alt="Sub photo 2" class="w-[48%] object-cover rounded-[3rem]">
-        <img src="images/h1.jpg (1).png" alt="Sub photo 1" class="w-[48%] object-cover rounded-[3rem]">
+        <img src="images/image 13.png" alt="Sub photo 2" class="w-[48%] object-cover rounded-[1.875rem]">
+        <img src="images/h1.jpg (1).png" alt="Sub photo 1" class="w-[48%] object-cover rounded-[1.875rem]">
       </div>
     </div>
 
     <!-- الجهة اليسرى (النص والقائمة والزرار) -->
-    <div class="w-full xl:w-[36%] lg:w-[42%] flex flex-col justify-center items-center lg:items-start gap-16 pb-[10rem] lg:pb-[0rem]">
+    <div class="w-full xl:w-[36%] xl:w-[42%] flex flex-col justify-center items-center xl:items-start gap-16 pb-[6.25rem] xl:pb-[0rem]">
       <div>
-        <h3 class="text-[5.4rem] text-[#181A20] font-semibold text-center lg:text-right">
+        <h3 class="text-[3.375rem] text-[#181A20] font-semibold text-center xl:text-right">
           رحلتك نحو التملك تبدأ <br /> معنا
         </h3>
-        <p class="text-[2.1rem] leading-loose text-center text-[#181A20] lg:text-right mb-10">
+        <p class="text-[1.3125rem] leading-loose text-center text-[#181A20] xl:text-right mb-10">
           نرافقك بخطوات مدروسة وحلول عقارية مبتكرة، لتجد منزلك <br /> المثالي بسهولة وثقة.
         </p>
       </div>
 
       <div class="flex flex-col gap-16">
+
         <!-- الميزة الأولى -->
         <div class="flex items-start">
-          <img src="images/List → Item.svg" alt="house icon" class="object-contain w-[4rem] h-[4rem] flex-shrink-0" />
+          <img src="images/List → Item.svg" alt="house icon" class="object-contain w-[2.5rem] h-[2.5rem] flex-shrink-0" />
           <div class="mr-8">
-            <h5 class="text-[2.5rem] font-semibold pb-4">استشارة مجانية</h5>
+            <h5 class="text-[1.5625rem] font-semibold pb-4">استشارة مجانية</h5>
           </div>
         </div>
 
         <!-- الميزة الثانية -->
         <div class="flex items-start">
-          <img src="images/List → Item.svg" alt="house icon" class="object-contain w-[4rem] h-[4rem] flex-shrink-0" />
+          <img src="images/List → Item.svg" alt="house icon" class="object-contain w-[2.5rem] h-[2.5rem] flex-shrink-0" />
           <div class="mr-8">
-            <h5 class="text-[2.5rem] font-semibold pb-4">تقديم طلب التمويل</h5>
+            <h5 class="text-[1.5625rem] font-semibold pb-4">تقديم طلب التمويل</h5>
           </div>
         </div>
 
         <!-- الميزة الثالثة -->
         <div class="flex items-start">
-          <img src="images/List → Item.svg" alt="house icon" class="object-contain w-[4rem] h-[4rem] flex-shrink-0" />
+          <img src="images/List → Item.svg" alt="house icon" class="object-contain w-[2.5rem] h-[2.5rem] flex-shrink-0" />
           <div class="mr-8">
-            <h5 class="text-[2.5rem] font-semibold pb-4">إتمام الإجراءات</h5>
+            <h5 class="text-[1.5625rem] font-semibold pb-4">إتمام الإجراءات</h5>
           </div>
         </div>
 
-        <!-- زرار الإجراء تحت كل المميزات -->
+        <!-- زرار الإجراء -->
         <div class="mt-6 self-center xl:self-start ">
-          <button class="bg-[#181A20] text-white px-[7rem] py-[3rem] rounded-2xl text-[2.5rem] hover:bg-[#8F7326] transition font-bold flex items-center justify-center gap-3">
-            <p class="ml-[3rem]">تواصل الان</p>
-            <img src="images/Vector (12).svg" alt="icon" class="w-12 h-12" />
+          <button class="bg-[#181A20] text-white px-[4.375rem] py-[1.875rem] rounded-2xl text-[1.5625rem] hover:bg-[#8F7326] transition font-bold flex items-center justify-center gap-3">
+            <p class="ml-[1.875rem]">تواصل الان</p>
+            <img src="images/Vector (12).svg" alt="icon" class="w-8 h-8" />
           </button>
         </div>
+
       </div>
     </div>
   </div>
 </section>
+
 <!-- section -->
-<section class="mt-40 mb-[50rem] flex flex-col items-center text-center px-5 lg:px-20 max-sm:mb-[7rem]">
+<section class="mt-[25rem] mb-[31.25rem] flex flex-col items-center text-center px-[3.125rem] lg:px-[12.5rem] max-sm:mb-[4.375rem]">
   <!-- العنوان الرئيسي -->
-  <h2 class="text-[5rem] font-bold ">اتعلم انه لدى شركة العقارية</h2>
+  <h2 class="text-[3.125rem] font-bold">اتعلم انه لدى شركة العقارية</h2>
 
   <!-- العنوان الفرعي -->
-  <h2 class="text-[5rem] font-semibold mb-6"> <span class="text-[#8F7326] ">حاسبة تمويل</span>؟</h2>
+  <h2 class="text-[3.125rem] font-semibold mb-[.5rem]">
+    <span class="text-[#8F7326]">حاسبة تمويل</span>؟
+  </h2>
 
   <!-- الفقرة -->
-  <p class="text-[2rem] leading-relaxed mb-2 text-[#333333]">
+  <p class="text-[1.25rem] leading-relaxed mb-[.5rem] text-[#333333]">
     جهزنا لك حاسبة بطريقة علمية تساعدك لحساب تمويلك بطريقة
   </p>
-  <p class="text-[2rem] leading-relaxed mb-8 text-[#333333] mb-[10rem]">
+  <p class="text-[1.25rem] leading-relaxed mb-[5rem] text-[#333333]">
     احترافية وسهلة الاستخدام
   </p>
 
   <!-- الزرار -->
-  <button class="bg-[#181A20] text-white px-[7rem] py-[2.8rem] rounded-2xl text-[2.5rem] hover:bg-[#8F7326] transition font-bold">
+  <button class="bg-[#181A20] text-white px-[4.375rem] py-[1.75rem] rounded-2xl text-[1.5625rem] hover:bg-[#8F7326] transition font-bold">
     احصل عليها الان
   </button>
 </section>
+
 <!-- //////////////// -->
-<footer class="bg-black bg-opacity-[0.84] text-white rounded-t-[5rem] flex flex-col justify-center items-center px-[3rem] lg:px-[8rem]">
+<footer class="bg-black bg-opacity-[0.84] text-white rounded-t-[3.125rem] flex flex-col justify-center items-center px-[1.875rem] lg:px-[5rem]">
   <div class="w-full px-[1.25rem] lg:px-[2rem]">
     <!-- المحتوى الرئيسي -->
-    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-[8rem] text-center xl:text-right py-[10rem] lg:py-[22rem] px-[2rem] lg:px-[16rem]">
-      <div class="flex flex-col items-center lg:items-center lg:justify-center gap-[2rem] lg:gap-[0rem]">
-        <div class="flex text-[3rem] sm:text-[4rem] md:text-[5rem] tracking-widest text-gray-100 justify-center lg:justify-center text-center pt-[3rem]">
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-[5rem] text-center xl:text-right py-[6.25rem] lg:py-[13.75rem] px-[1.25rem] lg:px-[10rem]">
+      <div class="flex flex-col items-center lg:items-center lg:justify-center gap-[1.25rem] lg:gap-[0rem]">
+        <div class="flex text-[1.875rem] sm:text-[2.5rem] md:text-[3.125rem] tracking-widest text-gray-100 justify-center lg:justify-center text-center pt-[1.875rem]">
           LOGO<br>HERE
         </div>
       </div>
 
-      <div class="pt-[3rem]">
-        <h3 class="text-[2.5rem]  font-bold text-[#FFFFFF] mb-[3.5rem]">الدعم</h3>
-        <ul class="space-y-[3rem] text-[#FFFFFF] font-normal text-[2rem] ">
-          <li><a href="#" class="hover:text-[#8F7326] transition-colors ">سياسة الخصوصية</a></li>
+      <div class="pt-[1.875rem]">
+        <h3 class="text-[1.5625rem] font-bold text-[#FFFFFF] mb-[2.1875rem]">الدعم</h3>
+        <ul class="space-y-[1.875rem] text-[#FFFFFF] font-normal text-[1.25rem]">
+          <li><a href="#" class="hover:text-[#8F7326] transition-colors">سياسة الخصوصية</a></li>
           <li><a href="#" class="hover:text-[#8F7326] transition-colors">الشروط والأحكام</a></li>
         </ul>
       </div>
 
-       <div>
-        <h3 class="text-[2.5rem]  font-bold text-[#FFFFFF] mb-[3.5rem]">الصفحات</h3>
-        <ul class="space-y-[3rem] text-[#FFFFFF] font-normal text-[2rem] ">
-          <li><a href="#" class="hover:text-[#8F7326] transition-colors ">الرئيسية</a></li>
+      <div>
+        <h3 class="text-[1.5625rem] font-bold text-[#FFFFFF] mb-[2.1875rem]">الصفحات</h3>
+        <ul class="space-y-[1.875rem] text-[#FFFFFF] font-normal text-[1.25rem]">
+          <li><a href="#" class="hover:text-[#8F7326] transition-colors">الرئيسية</a></li>
           <li><a href="#" class="hover:text-[#8F7326] transition-colors">من نحن</a></li>
-           <li><a href="#" class="hover:text-[#8F7326] transition-colors ">خدماتنا</a></li>
-          <li><a href="#" class="hover:text-[#8F7326] transition-colors ">تقديم طلب</a></li>
-
+          <li><a href="#" class="hover:text-[#8F7326] transition-colors">خدماتنا</a></li>
+          <li><a href="#" class="hover:text-[#8F7326] transition-colors">تقديم طلب</a></li>
         </ul>
       </div>
 
-       <div class="pt-[2rem]">
-        <h3 class="text-[2.5rem]  font-bold text-[#FFFFFF] mb-[3.5rem]">المزيد عنا </h3>
-        <ul class="space-y-[3rem] text-[#FFFFFF] font-normal text-[2rem] ">
+      <div class="pt-[1.25rem]">
+        <h3 class="text-[1.5625rem] font-bold text-[#FFFFFF] mb-[2.1875rem]">المزيد عنا</h3>
+        <ul class="space-y-[1.875rem] text-[#FFFFFF] font-normal text-[1.25rem]">
           <li>
-            <img src="images/map-marker-alt-solid.svg" alt="location icon" class="inline-block pl-[1rem] w-[3.5rem]"/>
-            <a href="#" class="hover:text-[#8F7326] transition-colors "> Laban,Riyadh</a>
+            <img src="images/map-marker-alt-solid.svg" alt="location icon" class="inline-block pl-[0.625rem] w-[2.1875rem]"/>
+            <a href="#" class="hover:text-[#8F7326] transition-colors"> Laban,Riyadh</a>
           </li>
           <li>
-            <img src="images/license.svg" alt="license icon" class="inline-block pl-[1rem] w-[3.5rem]"/>
+            <img src="images/license.svg" alt="license icon" class="inline-block pl-[0.625rem] w-[2.1875rem]"/>
             <a href="#" class="hover:text-[#8F7326] transition-colors">رقم الترخيص : 1200099</a>
           </li>
           <li>
-            <img src="images/Email.svg" alt="email icon" class="inline-block pl-[1rem] w-[3.5rem]"/>
-            <a href="#" class="hover:text-[#8F7326] transition-colors ">info@example.com</a>
+            <img src="images/Email.svg" alt="email icon" class="inline-block pl-[0.625rem] w-[2.1875rem]"/>
+            <a href="#" class="hover:text-[#8F7326] transition-colors">info@example.com</a>
           </li>
           <li>
-            <img src="images/whatsapp.svg" alt="phone icon" class="inline-block pl-[1rem] w-[3.5rem]"/>
-            <a href="#" class="hover:text-[#8F7326] transition-colors ">2222004694</a>
+            <img src="images/whatsapp.svg" alt="phone icon" class="inline-block pl-[0.625rem] w-[2.1875rem]"/>
+            <a href="#" class="hover:text-[#8F7326] transition-colors">2222004694</a>
           </li>
-
         </ul>
       </div>
     </div>
 
     <!-- الفاصل وحقوق النشر -->
-    <div class="border-t border-[#FFFFFF] pt-[5.5rem] pb-[4rem] text-center">
-      <span class="text-[1.5rem] md:text-[2rem] font-light text-[#FFFFFF]">حقوق النشر © 2025 جميع الحقوق محفوظة</span>
+    <div class="border-t border-[#FFFFFF] pt-[3.4375rem] pb-[2.5rem] text-center">
+      <span class="text-[0.9375rem] md:text-[1.25rem] font-light text-[#FFFFFF]">حقوق النشر © 2025 جميع الحقوق محفوظة</span>
     </div>
   </div>
 </footer>
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const closeBtn = document.getElementById("close-btn");
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("overlay");
+  const sidebarItems = document.querySelectorAll(".sidebar-item");
+
+  // Open sidebar
+  menuBtn.addEventListener("click", () => {
+    sidebar.classList.remove("-translate-x-full");
+    overlay.classList.remove("hidden");
+    overlay.classList.add("opacity-100");
+
+    // Animate sidebar items
+    sidebarItems.forEach((item, i) => {
+      setTimeout(() => {
+        item.classList.remove("opacity-0", "-translate-x-10");
+      }, i * 100);
+    });
+  });
+
+  // Close sidebar
+  const closeSidebar = () => {
+    sidebar.classList.add("-translate-x-full");
+    overlay.classList.add("hidden");
+    overlay.classList.remove("opacity-100");
+
+    sidebarItems.forEach((item) => {
+      item.classList.add("opacity-0", "-translate-x-10");
+    });
+  };
+
+  closeBtn.addEventListener("click", closeSidebar);
+  overlay.addEventListener("click", closeSidebar);
+</script>
+
 
 
 

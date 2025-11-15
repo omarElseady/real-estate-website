@@ -25,7 +25,7 @@ body {
 @media (max-width: 640px) {
   
    :root {
-  font-size: 6px !important;
+  font-size: 8.5px !important;
 }
  
   
@@ -40,7 +40,7 @@ body {
   nav.container, 
  
     :root {
-  font-size: 6px;
+  font-size: 9.6px;
 }
 }
 
@@ -56,14 +56,14 @@ body {
 @media (max-width: 1280px) {
   
   :root {
-  font-size: 8.5px;
+  font-size: 13.6px;
   }
 }
 
 @media (max-width: 1536px) {
 
  :root{
-    font-size: 8px;
+    font-size: 12.8px;
   }
   
 }
@@ -71,31 +71,31 @@ body {
  @media (min-width: 2100px) {
   
   :root{
-    font-size: 12px;
+    font-size: 19.2px;
   }
 }
 
  @media (min-width: 2400px) {
   
   :root{
-    font-size: 15px;
+    font-size: 24px;
   }
 }
  @media (min-width: 3200px) {
  
   :root{
-    font-size: 20px;
+    font-size: 32px;
   }
 }
  @media (min-width: 4900px) {
   
   :root{
-    font-size: 35px;
+    font-size: 56px;
   }
 }
  @media (min-width: 6200px) {
   
   :root{
-    font-size: 46px;
+    font-size: 73px;
   }
 }
