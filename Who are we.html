@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>من نحن</title>
+   <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Almarai', 'sans-serif'] },
+            spacing: { '7rem': '7rem', '10rem': '10rem', '11rem': '11rem' },
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-[#f3fff4]">
+   <!-- Hero Section -->
+<section class="relative flex flex-col bg-gradient-to-l from-[#775702] to-[#524211] h-fit">
+      <!-- Navbar -->
+   <nav class="flex flex-col lg:flex-row justify-between items-center py-[2.5rem] px-[3.125rem]  lg:px-[6.875rem] w-full z-50 relative max-lg:px-[1.875rem]">
+  <!-- Logo + Menu Icon -->
+  <div class="flex justify-between items-center w-full lg:w-auto ">
+    <!-- Logo -->
+    <div class="text-[3.75rem] lg:text-[3.125rem] text-[#ffffff] font-normal text-center ">
+      LOGO
+    </div>
+
+    <!-- Menu Icon (mobile only) -->
+    <button
+      id="menu-btn"
+      class="lg:hidden  p-[2.5rem] rounded-xl focus:outline-none"
+    >
+      <svg
+        id="menu-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        class="w-[3.125rem] h-[3.125rem] text-[#ffffff] transition-all duration-300"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M3 6h18M3 12h18M3 18h18" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Navigation Links -->
+  <ul
+    id="menu"
+    class="hidden lg:flex flex-row gap-[1.875rem] text-[#ffffff] font-medium text-[1.25rem] mt-[1.25rem] lg:mt-0"
+  >
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="Who are we.html">من نحن</a></li>
+    <li><a href="Services.html">خدماتنا</a></li>
+  </ul>
+
+  <!-- Buttons -->
+  <div
+    class="hidden lg:flex flex-wrap gap-[.625rem] justify-center w-full lg:w-auto buttons-container"
+  >
+    <button class="bg-[#ffffff] text-[#A5852E] px-[2.5rem] py-[.625rem] rounded-[0.3125rem]  text-[1.25rem] transition hover:bg-[#A5852E] hover:text-white">
+      تقديم طلب
+    </button>
+    <button
+      class="bg-[#A5852E] text-[#ffffff] px-[2.5rem] py-[.625rem] rounded-[0.3125rem] text-[1.25rem] transition font-bold hover:bg-[#8F7326]"
+    >
+      اتصل بنا
+    </button>
+  </div>
+</nav>
+
+<!-- Sidebar (Mobile only) -->
+<div
+  id="sidebar"
+  class="fixed top-0 left-0 h-full max-sm:w-3/4 w-2/5 bg-white shadow-2xl z-[100] -translate-x-full transition-transform duration-500 ease-in-out flex flex-col justify-between py-16 px-10"
+>
+  <!-- Close Button -->
+  <button
+    id="close-btn"
+    class="absolute top-10 right-10 text-4xl p-[1.875rem] text-[#A5852E] font-bold hover:rotate-90 transition-all duration-300 z-30"
+  >
+    ✕
+  </button>
+
+  <!-- Sidebar Content -->
+  <div class="flex flex-col  items-center h-full text-center space-y-10 animate-fadeIn">
+    <h1 class="py-[9.375rem] text-[3.125rem]">logo</h1>
+    <ul class="space-y-10 text-[1.875rem] font-medium text-[#181A20]">
+      <li class="opacity-0 -translate-x-10 transition-all duration-700 delay-100 sidebar-item"><a href="index.html">الرئيسية</a></li>
+      <li class="opacity-0 -translate-x-10 transition-all duration-700 delay-200 sidebar-item"><a href="Who are we.html">من نحن</a></li>
+      <li class="opacity-0 -translate-x-10 transition-all duration-700 delay-300 sidebar-item"><a href="Services.html">خدماتنا</a></li>
+    </ul>
+
+    <div class="flex flex-col gap-6 w-full">
+      <button class="bg-white border border-[#A5852E] text-[#A5852E] py-7 text-2xl rounded-xl font-bold opacity-0 -translate-x-10 transition-all duration-700 delay-400 sidebar-item hover:bg-[#A5852E] hover:text-white">
+        تقديم طلب
+      </button>
+      <button class="bg-[#A5852E] text-white py-7 text-2xl rounded-xl font-bold opacity-0 -translate-x-10 transition-all duration-700 delay-500 sidebar-item hover:bg-[#8F7326]">
+        اتصل بنا
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Overlay -->
+<div
+  id="overlay"
+  class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-[90] hidden transition-opacity duration-500"
+></div>
+
+
+
+<style>
+  /* Smooth fade-in animation for sidebar content */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.6s ease-in-out forwards;
+  }
+</style>
+
+
+
+
+
+      <!-- Hero Content -->
+      <div class="relative flex flex-col-reverse lg:flex-row-reverse items-start justify-between pt-[.78125rem]  lg:pt-[5rem]">
+        <!-- Right Layer -->
+        <div class="absolute left-[18.75rem] top-[-6.25rem] z-10 h-screen max-lg:hidden "><img src="images/Layer_x0020_1 (1).svg" /></div>
+
+        <!-- Main Image -->
+        <div class="w-full lg:w-1/2 flex justify-center lg:mb-0 z-20">
+          <img src="images//Group 7.svg" alt="عقارات" class="rounded-2xl w-full object-cover "/>
+        </div>
+
+        <!-- Left Layer -->
+        <div class="absolute right-0 top-0 z-10"><img src="images//Layer_x0020_1.svg" /></div>
+
+        <!-- Text -->
+        <div class="lg:w-1/2 text-right text-[#ffffff] px-6 pr-[6.875rem] z-10 flex flex-col lg:flex-col items-start text-left max-lg:items-center max-lg:justify-center max-lg:w-full max-lg:px-0 max-sm:px-[4rem]">
+          <h1 class="text-[3.625rem] max-xl:text-[3.0625rem]  font-bold mb-[.9375rem] leading-tight text-white  max-lg:text-center xl:whitespace-nowrap">
+  <span class="block mb-[.78125rem]">مجموعة من المستشارين العقاريين</span>
+  <span class="block">لتقديم الحلول لك</span>
+</h1>
+
+          <p class="text-[1.25rem] max-xl:text-[1.1875rem] text-[#ffffff] opacity-[.79] mb-[1.5625rem] leading-relaxed font-bold max-lg:text-center">
+            <span class="block">مجموعة من المستشارين العقاريين المتخصصين في تقديم أفضل </span>
+            <span class="block">حلول التمويل العقاري في المملكة العربية السعودية،</span>
+          </p>
+          <div class="flex flex-col lg:flex-row gap-6 justify-center my-[3.125rem] max-lg:w-2/5 max-sm:w-2/3">
+  <button class="bg-white text-black text-[1.40625rem] rounded-lg transition-all duration-300 ease-in-out
+                 px-[5rem] py-[1.5rem] lg:px-[6.25rem] lg:py-[1.875rem] max-lg:px-10 max-lg:py-[1.875rem] max-sm:py-[1.5625rem] w-full max-lg:w-full text-center
+                 hover:bg-[#8F7326] hover:text-white hover:scale-105 hover:shadow-xl font-bold max-sm:px-[6.25rem] max-sm:py-[1.25rem]">
+    تواصل الان
+  </button>
+</div>
+
+        </div>
+      </div>
+      
+    </section>
+    <section class="flex flex-col lg:flex-row bg-[#F3FFF4] py-[20rem] max-sm:px-[4rem]">
+      <div
+  class="w-full xl:w-[44%] lg:w-[56%] flex flex-col justify-center items-center lg:items-start pr-[0rem] mt-[-1rem] lg:pr-[10rem] gap-8 sm:px-[5rem]"
+>
+  <div>
+      <h3 class="text-[2.5rem] font-semibold pb-16 text-center lg:text-right">
+من نحن      </h3>
+      <p class="text-[1.5rem] leading-loose text-center lg:text-right">
+        تعد شركة حلول الإمكان العقارية من الشركات الرائدةفي تقديم الحلول 
+السكنية والتسويق العقاري في المملكة العربية السعودية، بخبرة واسعة 
+في تطوير وتقديم حلول عقارية متكاملةعبر عدة مدن، مما يجعلها لاعباً رئيسياً
+ في السوق العقاري.
+      </p>
+    </div>
+    <div>
+      <h3 class="text-[2.5rem] font-semibold pb-3.5 text-center lg:text-right">
+رؤيتنا     </h3>
+      <p class="text-[1.5rem] leading-loose text-center lg:text-right">
+أن نكون الخيار الأول في الحلول العقارية المتكاملة، وأن نقود الابتكار في تطوير المجتمعات السكنية الحديثة.      </p>
+    </div>
+    <div>
+      <h3 class="text-[2.5rem] font-semibold pb-3.5 text-center lg:text-right">
+رسالتنا</h3>
+      <p class="text-[1.5rem] leading-loose text-center lg:text-right">
+تقديم خدمات عقارية عالية الجودة ترتكز على الثقة والشفافية، وتلبي احتياجات عملائنا بتجارب متميزة تدعم استقرارهم وتطلعاتهم المستقبلية.      </p>
+    </div>
+
+  
+    
+  </div>
+</div>
+
+      <div
+        class="flex w-full xl:w-[56%] lg:w-[44%] relative justify-center lg:justify-start items-center mt-[5rem] lg:mt-[0rem]"
+      >
+        <div class="relative h-fit">
+          <img
+            src="images/Content.png"
+            alt="A modern house"
+            class="xl:h-screen lg:h-[70vh] xs:w-full pl-[5rem] pr-[3rem] "
+          />
+          
+        </div>
+      </div>
+    </section>
+
+    
+<!-- footer -->
+<footer class="bg-black bg-opacity-[0.84] text-white rounded-t-[3.125rem] flex flex-col justify-center items-center px-[1.875rem] lg:px-[5rem]">
+  <div class="w-full px-[1.25rem] lg:px-[2rem]">
+    <!-- المحتوى الرئيسي -->
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-[5rem] text-center xl:text-right py-[6.25rem] lg:py-[13.75rem] px-[1.25rem] lg:px-[10rem]">
+      <div class="flex flex-col items-center lg:items-center lg:justify-center gap-[1.25rem] lg:gap-[0rem]">
+        <div class="flex text-[1.875rem] sm:text-[2.5rem] md:text-[3.125rem] tracking-widest text-gray-100 justify-center lg:justify-center text-center pt-[1.875rem]">
+          LOGO<br>HERE
+        </div>
+      </div>
+
+      <div class="pt-[1.875rem]">
+        <h3 class="text-[1.5625rem] font-bold text-[#FFFFFF] mb-[2.1875rem]">الدعم</h3>
+        <ul class="space-y-[1.875rem] text-[#FFFFFF] font-normal text-[1.25rem]">
+          <li><a href="#" class="hover:text-[#8F7326] transition-colors">سياسة الخصوصية</a></li>
+          <li><a href="#" class="hover:text-[#8F7326] transition-colors">الشروط والأحكام</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-[1.5625rem] font-bold text-[#FFFFFF] mb-[2.1875rem]">الصفحات</h3>
+        <ul class="space-y-[1.875rem] text-[#FFFFFF] font-normal text-[1.25rem]">
+          <li><a href="index.html" class="hover:text-[#8F7326] transition-colors">الرئيسية</a></li>
+          <li><a href="Who are we.html" class="hover:text-[#8F7326] transition-colors">من نحن</a></li>
+          <li><a href="Services.html" class="hover:text-[#8F7326] transition-colors">خدماتنا</a></li>
+          <li><a href="#" class="hover:text-[#8F7326] transition-colors">تقديم طلب</a></li>
+        </ul>
+      </div>
+
+      <div class="pt-[1.25rem]">
+        <h3 class="text-[1.5625rem] font-bold text-[#FFFFFF] mb-[2.1875rem]">المزيد عنا</h3>
+        <ul class="space-y-[1.875rem] text-[#FFFFFF] font-normal text-[1.25rem]">
+          <li>
+            <img src="images/map-marker-alt-solid.svg" alt="location icon" class="inline-block pl-[0.625rem] w-[2.1875rem]"/>
+            <a href="#" class="hover:text-[#8F7326] transition-colors"> Laban,Riyadh</a>
+          </li>
+          <li>
+            <img src="images/license.svg" alt="license icon" class="inline-block pl-[0.625rem] w-[2.1875rem]"/>
+            <a href="#" class="hover:text-[#8F7326] transition-colors">رقم الترخيص : 1200099</a>
+          </li>
+          <li>
+            <img src="images/Email.svg" alt="email icon" class="inline-block pl-[0.625rem] w-[2.1875rem]"/>
+            <a href="#" class="hover:text-[#8F7326] transition-colors">info@example.com</a>
+          </li>
+          <li>
+            <img src="images/whatsapp.svg" alt="phone icon" class="inline-block pl-[0.625rem] w-[2.1875rem]"/>
+            <a href="#" class="hover:text-[#8F7326] transition-colors">2222004694</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- الفاصل وحقوق النشر -->
+    <div class="border-t border-[#FFFFFF] pt-[3.4375rem] pb-[2.5rem] text-center">
+      <span class="text-[0.9375rem] md:text-[1.25rem] font-light text-[#FFFFFF]">حقوق النشر © 2025 جميع الحقوق محفوظة</span>
+    </div>
+  </div>
+</footer>
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const closeBtn = document.getElementById("close-btn");
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("overlay");
+  const sidebarItems = document.querySelectorAll(".sidebar-item");
+
+  // Open sidebar
+  menuBtn.addEventListener("click", () => {
+    sidebar.classList.remove("-translate-x-full");
+    overlay.classList.remove("hidden");
+    overlay.classList.add("opacity-100");
+
+    // Animate sidebar items
+    sidebarItems.forEach((item, i) => {
+      setTimeout(() => {
+        item.classList.remove("opacity-0", "-translate-x-10");
+      }, i * 100);
+    });
+  });
+
+  // Close sidebar
+  const closeSidebar = () => {
+    sidebar.classList.add("-translate-x-full");
+    overlay.classList.add("hidden");
+    overlay.classList.remove("opacity-100");
+
+    sidebarItems.forEach((item) => {
+      item.classList.add("opacity-0", "-translate-x-10");
+    });
+  };
+
+  closeBtn.addEventListener("click", closeSidebar);
+  overlay.addEventListener("click", closeSidebar);
+</script>
+  
+</body>
+</html>

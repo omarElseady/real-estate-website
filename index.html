@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>موقع عقارات</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -59,9 +60,9 @@
     id="menu"
     class="hidden lg:flex flex-row gap-[1.875rem] text-[#ffffff] font-medium text-[1.25rem] mt-[1.25rem] lg:mt-0"
   >
-    <li><a href="#">الرئيسية</a></li>
-    <li><a href="#">من نحن</a></li>
-    <li><a href="#">خدماتنا</a></li>
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="Who are we.html">من نحن</a></li>
+    <li><a href="Services.html">خدماتنا</a></li>
   </ul>
 
   <!-- Buttons -->
@@ -96,9 +97,9 @@
   <div class="flex flex-col  items-center h-full text-center space-y-10 animate-fadeIn">
     <h1 class="py-[9.375rem] text-[3.125rem]">logo</h1>
     <ul class="space-y-10 text-[1.875rem] font-medium text-[#181A20]">
-      <li class="opacity-0 -translate-x-10 transition-all duration-700 delay-100 sidebar-item"><a href="#">الرئيسية</a></li>
-      <li class="opacity-0 -translate-x-10 transition-all duration-700 delay-200 sidebar-item"><a href="#">من نحن</a></li>
-      <li class="opacity-0 -translate-x-10 transition-all duration-700 delay-300 sidebar-item"><a href="#">خدماتنا</a></li>
+      <li class="opacity-0 -translate-x-10 transition-all duration-700 delay-100 sidebar-item"><a href="index.html">الرئيسية</a></li>
+      <li class="opacity-0 -translate-x-10 transition-all duration-700 delay-200 sidebar-item"><a href="Who are we.html">من نحن</a></li>
+      <li class="opacity-0 -translate-x-10 transition-all duration-700 delay-300 sidebar-item"><a href="Services.html">خدماتنا</a></li>
     </ul>
 
     <div class="flex flex-col gap-6 w-full">
@@ -716,7 +717,7 @@
 </section>
 
 <!-- section -->
-<section class="mt-[25rem] mb-[31.25rem] flex flex-col items-center text-center px-[3.125rem] lg:px-[12.5rem] max-sm:mb-[4.375rem]">
+<section class="mt-[25rem] mb-[24rem] flex flex-col items-center text-center px-[3.125rem] lg:px-[12.5rem] max-sm:mb-[4.375rem]">
   <!-- العنوان الرئيسي -->
   <h2 class="text-[3.125rem] font-bold">اتعلم انه لدى شركة العقارية</h2>
 
@@ -740,6 +741,33 @@
 </section>
 
 <!-- //////////////// -->
+
+<section class="text-center xl:px-[15rem] lg:px-[5rem] md:px-[5rem] sm:px-[3rem] px-[10rem] mb-[16rem]">
+  <h2 class="text-[3.125rem] font-bold mb-[4rem]">اراء <span class="text-[#8F7326]">عملاءنا</span>
+ </h2>
+  <div class="swiper mySwiper">
+  <div class="swiper-wrapper " id="slides-container">
+    <!-- السلايدات هتتحط أوتوماتيك من الـ JS -->
+  </div>
+
+  <!-- <div class="swiper-pagination"></div> -->
+</div>
+</section>
+
+<!-- //////////////// -->
+
+<section class="text-center xl:px-[15rem] lg:px-[5rem] md:px-[5rem] sm:px-[3rem] px-[10rem] md:mb-[48rem] mb-[24rem]">
+  <h2 class="text-[3.125rem] font-bold mb-[4rem]">شركائنا
+ </h2>
+  <div class="swiper mySwiper-2">
+  <div class="swiper-wrapper flex items-center" id="slides-container-2">
+    <!-- السلايدات هتتحط أوتوماتيك من الـ JS -->
+  </div>
+</div>
+</section>
+
+<!-- //////////////// -->
+
 <footer class="bg-black bg-opacity-[0.84] text-white rounded-t-[3.125rem] flex flex-col justify-center items-center px-[1.875rem] lg:px-[5rem]">
   <div class="w-full px-[1.25rem] lg:px-[2rem]">
     <!-- المحتوى الرئيسي -->
@@ -761,9 +789,9 @@
       <div>
         <h3 class="text-[1.5625rem] font-bold text-[#FFFFFF] mb-[2.1875rem]">الصفحات</h3>
         <ul class="space-y-[1.875rem] text-[#FFFFFF] font-normal text-[1.25rem]">
-          <li><a href="#" class="hover:text-[#8F7326] transition-colors">الرئيسية</a></li>
-          <li><a href="#" class="hover:text-[#8F7326] transition-colors">من نحن</a></li>
-          <li><a href="#" class="hover:text-[#8F7326] transition-colors">خدماتنا</a></li>
+          <li><a href="index.html" class="hover:text-[#8F7326] transition-colors">الرئيسية</a></li>
+          <li><a href="Who are we.html" class="hover:text-[#8F7326] transition-colors">من نحن</a></li>
+          <li><a href="Services.html" class="hover:text-[#8F7326] transition-colors">خدماتنا</a></li>
           <li><a href="#" class="hover:text-[#8F7326] transition-colors">تقديم طلب</a></li>
         </ul>
       </div>
@@ -797,6 +825,8 @@
     </div>
   </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
   const menuBtn = document.getElementById("menu-btn");
   const closeBtn = document.getElementById("close-btn");
@@ -831,6 +861,183 @@
 
   closeBtn.addEventListener("click", closeSidebar);
   overlay.addEventListener("click", closeSidebar);
+
+  // Swiper initialization
+  const data1 = [
+    {
+      img: "images/girl.png",
+      name: "محمد الجميلي",
+      type: "شخصي",
+      rating: 4,
+      desc: "شكرا حلول الامكان العقارية وشكر خاص للموظفة الاخت عائشه الشهري على مجهوداتها الجباره في التواصل مع الاطراف ذات العلاقة لتسهيل شراء<br />العقار وتجربة جميله مرت لي بواسطة ابن عمي والذي تعامل معها قبلي  "
+    },
+    {
+      img: "images/coffee.png",
+      name: "محمد الجميلي",
+      type: "شخصي",
+      rating: 3,
+      desc: "شكرا حلول الامكان العقارية وشكر خاص للموظفة الاخت عائشه الشهري على مجهوداتها الجباره في التواصل مع الاطراف ذات العلاقة لتسهيل شراء<br />العقار وتجربة جميله مرت لي بواسطة ابن عمي والذي تعامل معها قبلي  "
+    },
+    {
+      img: "images/girl.png",
+      name: "محمد الجميلي",
+      type: "شخصي",
+      rating: 5,
+      desc: "شكرا حلول الامكان العقارية وشكر خاص للموظفة الاخت عائشه الشهري على مجهوداتها الجباره في التواصل مع الاطراف ذات العلاقة لتسهيل شراء<br />العقار وتجربة جميله مرت لي بواسطة ابن عمي والذي تعامل معها قبلي  "
+    },
+    {
+      img: "images/girl.png",
+      name: "محمد الجميلي",
+      type: "شخصي",
+      rating: 5,
+      desc: "شكرا حلول الامكان العقارية وشكر خاص للموظفة الاخت عائشه الشهري على مجهوداتها الجباره في التواصل مع الاطراف ذات العلاقة لتسهيل شراء<br />العقار وتجربة جميله مرت لي بواسطة ابن عمي والذي تعامل معها قبلي  "
+    },
+    {
+      img: "images/girl.png",
+      name: "محمد الجميلي",
+      type: "شخصي",
+      rating: 5,
+      desc: "شكرا حلول الامكان العقارية وشكر خاص للموظفة الاخت عائشه الشهري على مجهوداتها الجباره في التواصل مع الاطراف ذات العلاقة لتسهيل شراء<br />العقار وتجربة جميله مرت لي بواسطة ابن عمي والذي تعامل معها قبلي  "
+    },
+    {
+      img: "images/girl.png",
+      name: "محمد الجميلي",
+      type: "شخصي",
+      rating: 5,
+      desc: "شكرا حلول الامكان العقارية وشكر خاص للموظفة الاخت عائشه الشهري على مجهوداتها الجباره في التواصل مع الاطراف ذات العلاقة لتسهيل شراء<br />العقار وتجربة جميله مرت لي بواسطة ابن عمي والذي تعامل معها قبلي  "
+    },
+    {
+      img: "images/girl.png",
+      name: "محمد الجميلي",
+      type: "شخصي",
+      rating: 5,
+      desc: "شكرا حلول الامكان العقارية وشكر خاص للموظفة الاخت عائشه الشهري على مجهوداتها الجباره في التواصل مع الاطراف ذات العلاقة لتسهيل شراء<br />العقار وتجربة جميله مرت لي بواسطة ابن عمي والذي تعامل معها قبلي  "
+    },
+    {
+      img: "images/girl.png",
+      name: "محمد الجميلي",
+      type: "شخصي",
+      rating: 5,
+      desc: "شكرا حلول الامكان العقارية وشكر خاص للموظفة الاخت عائشه الشهري على مجهوداتها الجباره في التواصل مع الاطراف ذات العلاقة لتسهيل شراء<br />العقار وتجربة جميله مرت لي بواسطة ابن عمي والذي تعامل معها قبلي  "
+    }
+  ];
+
+  const Colaporations = [
+    {
+      img: "images/col1.png",
+    },
+    {
+      img: "images/col2.png",
+    },
+    {
+      img: "images/col3.png",
+    },
+    {
+      img: "images/col4.png",
+    },
+    {
+      img: "images/col1.png",
+    },
+    {
+      img: "images/col2.png",
+    },
+    {
+      img: "images/col3.png",
+    },
+    {
+      img: "images/col4.png",
+    }
+  ];
+
+  // نضيف العناصر داخل السلايدر:
+  const slidesContainer = document.getElementById("slides-container");
+  const slidesContainer2 = document.getElementById("slides-container-2");
+
+
+  data1.forEach(item => {
+    let starsHtml = "";
+    for (let i = 0; i < item.rating; i++) {
+      starsHtml += `<img src="images/star.svg" class="w-[1.75rem] inline-block mx-[0.2rem]" />`;
+    }
+    for (let i = item.rating; i < 5; i++) {
+      starsHtml += `<img src="images/star-empty.svg" class="w-[1.75rem] inline-block mx-[0.2rem]" />`;
+    }
+
+    slidesContainer.innerHTML += `
+      <div class="swiper-slide flex flex-col items-start px-[1rem] ml-[0]">
+        <div class="flex mb-[1.8rem] sm:justify-start justify-center w-full">
+          <img src="${item.img}" alt="${item.name} profile picture" class="w-[7rem] h-[7rem] rounded-full object-cover ml-[1.3125rem]"/>
+          <div class="flex flex-col items-start justify-center">
+            <h3 class="text-[1.3125rem]">${item.name}</h3>
+            <h5 class="text-[0.85rem] text-gray-500">${item.type}</h5>
+            <div class="">${starsHtml}</div>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <img src="images/Icon pack.svg" alt="quote icon" class="w-[2rem] ml-[1rem]"/>
+          <p class="text-right text-[1.3125rem]">${item.desc}</p>
+        </div>
+      </div>
+    `;
+  });
+
+  Colaporations.forEach(item => {
+    slidesContainer2.innerHTML += `
+      <div class="swiper-slide flex items-center justify-center h-full">
+        <img src="${item.img}" alt="collaboration logo" class="w-[15rem] object-contain my-auto"/>
+      </div>
+    `;
+  });
+
+  // نعمل السوايبر:
+  const swiper = new Swiper(".mySwiper", {
+    spaceBetween: 24,
+    loop: true,          // اللوب
+    autoplay: {          // تشغيل تلقائي (اختياري)
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    slidesPerView: 3,
+    breakpoints: {
+      6200: { slidesPerView: 3, spaceBetween: 109 },
+      4900: { slidesPerView: 3, spaceBetween: 84 },
+      3200: { slidesPerView: 3, spaceBetween: 48 },
+      2400: { slidesPerView: 3, spaceBetween: 36 },
+      2100: { slidesPerView: 3, spaceBetween: 29 },
+      1536: { slidesPerView: 3, spaceBetween: 24 },
+      1280: { slidesPerView: 3, spaceBetween: 24 },
+      1224: { slidesPerView: 3, spaceBetween: 24 },
+      992:  { slidesPerView: 3, spaceBetween: 16 },
+      768:  { slidesPerView: 2, spaceBetween: 16 },
+      600:  { slidesPerView: 2, spaceBetween: 16 },
+      400:  { slidesPerView: 1, spaceBetween: 16 },
+      0:    { slidesPerView: 1, spaceBetween: 0 }
+    },
+  });
+  const swiper2 = new Swiper(".mySwiper-2", {
+    spaceBetween: 24,
+    loop: true,          // اللوب
+    autoplay: {          // تشغيل تلقائي (اختياري)
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    slidesPerView: 3,
+    breakpoints: {
+      6200: { slidesPerView: 4, spaceBetween: 109 },
+      4900: { slidesPerView: 4, spaceBetween: 84 },
+      3200: { slidesPerView: 4, spaceBetween: 48 },
+      2400: { slidesPerView: 4, spaceBetween: 36 },
+      2100: { slidesPerView: 4, spaceBetween: 29 },
+      1536: { slidesPerView: 4, spaceBetween: 24 },
+      1280: { slidesPerView: 4, spaceBetween: 24 },
+      1224: { slidesPerView: 4, spaceBetween: 24 },
+      992:  { slidesPerView: 4, spaceBetween: 16 },
+      768:  { slidesPerView: 3, spaceBetween: 16 },
+      600:  { slidesPerView: 3, spaceBetween: 16 },
+      400:  { slidesPerView: 2, spaceBetween: 16 },
+      0:    { slidesPerView: 1, spaceBetween: 0 }
+    },
+  });
 </script>
 
 
